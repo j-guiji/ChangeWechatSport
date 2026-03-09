@@ -53,6 +53,8 @@ def login(user, password):
 def main():
     login_token = 0
     login_token, userid = login(user, password)
+    print(user)
+    print(password)
     if login_token == 0:
         print("登陆失败")
         return "login fail"
@@ -110,3 +112,4 @@ if __name__ == "__main__":
     # step = os.environ['STEP']
     # step = str(randint(10123, 12302)) 
     main()
+
