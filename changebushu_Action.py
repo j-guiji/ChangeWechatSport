@@ -17,6 +17,7 @@ def login(user, password):
         "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
         "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2"
     }
+    print(url1)
     data1 = {
         "client_id": "HuaMi",
         "password": f"{password}",
@@ -24,6 +25,7 @@ def login(user, password):
         "token": "access"
     }
     r1 = requests.post(url1, data=data1, headers=headers, allow_redirects=False)
+    print(r1)
     location = r1.headers["Location"]
     try:
         code = get_code(location)
@@ -112,4 +114,5 @@ if __name__ == "__main__":
     # step = os.environ['STEP']
     # step = str(randint(10123, 12302)) 
     main()
+
 
