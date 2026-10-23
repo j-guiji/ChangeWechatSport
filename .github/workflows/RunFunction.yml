@@ -7,16 +7,16 @@ on:
 
 jobs: 
   ChangBuShu: 
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-latest
     if: true
     steps:
     - name: checkout
       uses: actions/checkout@v2
       
-    - name: Set up Python 3.9.1
+    - name: Set up Python 3.9.12
       uses: actions/setup-python@v1
       with:
-        python-version: 3.9.1
+        python-version: 3.9.12
         
     - name: 安装环境
       run: pip install -r ./requirements.txt
